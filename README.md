@@ -1,18 +1,56 @@
+[![Build Status](https://travis-ci.org/LoyolaChicagoCode/hello-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/hello-java)
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This build will always fail because it has 2 examples of failing tests:
+one based on the source code, and one based on an incorrect test.
 
+# Learning Objectives
 
-Hi there! Welcome to Cloud9 IDE!
+* Simple hello world example
+* Building with Gradle (using the Gradle wrapper)
+* Automated unit testing with JUnit
+* Continuous integration with Travis
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+# System requirements
 
-Happy coding!
-The Cloud9 IDE team# Lab1
+* Java 6 SDK or later
+
+# Running the Application
+
+On Linux or Mac OS X:
+
+    $ ./gradlew run
+	
+On Windows:
+	
+    > gradlew run
+
+# Running the Tests
+
+On Linux or Mac OS X:
+
+    $ ./gradlew test
+	
+On Windows:
+	
+    > gradlew test
+
+# Running the Application Outside Gradle
+
+Unlike running the application using Gradle's `run` task,
+this allows passing command-line arguments.
+
+On Linux or Mac OS X:
+
+    $ ./build/scripts/hello-java arg1 arg2 arg3
+
+or
+
+    $ java -jar build/lib/hello-java.jar arg1 arg2 arg3
+
+On Windows:
+
+    > .\build\scripts\hello-java arg1 arg2 arg3
+
+or
+
+    > java -jar build\lib\hello-java.jar arg1 arg2 arg3
