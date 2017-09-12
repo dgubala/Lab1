@@ -1,61 +1,59 @@
+
 package lab1;
 import java.util.Scanner;
 import java.util.*;
 
-//lab 1 - part 3 
+//lab 1 - part 4 
 public class lab1 {
 
     public static void main(String[] args){
 
-        Scanner scan = new Scanner(System.in);
-        int n = 0;
+      //  Scanner scan = new Scanner(System.in);
+        int n = 15;
        
 
-        System.out.println("Pick a Number!");
+        //System.out.println("Pick a Number!");
         
-        n = scan.nextInt();
+        // n = scan.nextInt();
         
-        String[] newArray = new String[n + 1];
-      
+
+       
+        List<String> fizzBuzzList = new ArrayList<String>();
         
-        newArray = fizzBuzzArray(n,newArray);
-        
-        for(int x = 1; x < newArray.length; x++)
-        {
+
+                      
+                      
+            for (int i = 0; i< n + 1; i++) {
+
+                 if (i % 3 == 0 && i % 5 == 0) {
+         
+                    fizzBuzzList.add("fizz buzz");
+                    
+                 } else if (i % 3 == 0) {
+     
+                fizzBuzzList.add("fizz");
+                
+                 } else if (i % 5 == 0) {
+
+                fizzBuzzList.add("buzz");
+                
+                 } else {
+
+                   fizzBuzzList.add(String.valueOf(i)); 
+                } 
             
-            System.out.println(newArray[x]);
-        }
+            
+             }
+        
+        
+              for(int x = 1; x < fizzBuzzList.size(); x++)
+               {
+            
+                    System.out.println(fizzBuzzList.get(x));
+               }
 
     }
 
 
 
-     public static String[] fizzBuzzArray(int n, String[] newArray)
-       {
-         
-           //newArray = new String[n + 1];
-
-    
-              for (int i = 1; i< n + 1; i++) {
-
-                 if (i % 3 == 0 && i % 5 == 0) {
-                    //System.out.println("fizz buzz");
-                    newArray[i] = "fizz buzz";
-                 } else if (i % 3 == 0) {
-                    //System.out.println("fizz");
-                newArray[i] = "fizz";
-                 } else if (i % 5 == 0) {
-                    //System.out.println("buzz");
-                newArray[i] = "buzz";
-                 } else {
-                   //System.out.println(i);
-                   newArray[i] = String.valueOf(i);
-                } 
-            
-            
-              }
-            
-        return newArray;
-        
-     }
 }
