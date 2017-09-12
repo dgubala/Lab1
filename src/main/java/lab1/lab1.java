@@ -9,6 +9,8 @@ public class lab1 {
     public static void main(String[] args){
 
       //  Scanner scan = new Scanner(System.in);
+      
+      //scanner will not work when executing via gradle so for now n is being set in the code
         int n = 15;
        
 
@@ -27,7 +29,7 @@ public class lab1 {
 
                  if (i % 3 == 0 && i % 5 == 0) {
          
-                    fizzBuzzList.add("fizz buzz");
+                fizzBuzzList.add("fizz buzz");
                     
                  } else if (i % 3 == 0) {
      
